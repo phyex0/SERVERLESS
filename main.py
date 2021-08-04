@@ -19,5 +19,5 @@ if __name__ == '__main__':
     yourTimeZone = "Atlantic/Canary"
 
     print_time_and_date(myTimeZone)
-    print("************************")
+    print("***********************")
     print_time_and_date(yourTimeZone)
