@@ -1,9 +1,10 @@
 import requests
+TIME_API_URL = "https://worldtimeapi.org/api/timezone/"
 
 
-def print_time_and_date(url):
+def print_time_and_date(time_zone):
     """Prints the time and date"""
-    response = requests.get(url)
+    response = requests.get(TIME_API_URL + time_zone)
     response_json = response.json()
 
     print(response_json["timezone"])
@@ -14,9 +15,8 @@ def print_time_and_date(url):
 if __name__ == '__main__':
 
     myTimeZone = "Europe/Istanbul"
-    yourTimeZone = "Europe/Madrid"
-    baseUrl = "https://worldtimeapi.org/api/timezone/"
+    yourTimeZone = "Atlantic/Canary"
 
-    print_time_and_date(baseUrl + myTimeZone)
+    print_time_and_date(myTimeZone)
     print("************************")
-    print_time_and_date(baseUrl + yourTimeZone)
+    print_time_and_date(yourTimeZone)
