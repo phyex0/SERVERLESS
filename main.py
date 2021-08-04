@@ -1,26 +1,22 @@
-import json, requests
+import requests
 
-def printTimeDate(url):
 
+def print_time_and_date(url):
+    """Prints the time and date"""
     response = requests.get(url)
-    responseJSON = response.json()
+    response_json = response.json()
 
-    print(responseJSON["timezone"])
-    print(responseJSON["utc_datetime"])
-    print("GMT:"+ responseJSON["utc_offset"])
-
+    print(response_json["timezone"])
+    print(response_json["utc_datetime"])
+    print("GMT:" + response_json["utc_offset"])
 
 
 if __name__ == '__main__':
 
-    myTimeZone ="Europe/Istanbul"
+    myTimeZone = "Europe/Istanbul"
     yourTimeZone = "Europe/Madrid"
-    baseUrl = "http://worldtimeapi.org/api/timezone/"
+    baseUrl = "https://worldtimeapi.org/api/timezone/"
 
-    printTimeDate(baseUrl+myTimeZone)
+    print_time_and_date(baseUrl + myTimeZone)
     print("************************")
-    printTimeDate(baseUrl+yourTimeZone)
-
-
-
-
+    print_time_and_date(baseUrl + yourTimeZone)
