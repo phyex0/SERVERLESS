@@ -15,6 +15,8 @@ def print_time_and_date(time_zone):
 if __name__ == '__main__':
     """This happens when we run from the command line."""
 
+    """ This is a super fucking important bugfix!!! """
+
     myTimeZone = "Europe/Istanbul"
     yourTimeZone = "Atlantic/Canary"
 
